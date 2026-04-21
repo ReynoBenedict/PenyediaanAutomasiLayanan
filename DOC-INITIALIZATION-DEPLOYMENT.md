@@ -1,6 +1,8 @@
 # Dokumentasi Percobaan Deployment Aplikasi di Kubernetes
 
-**Referensi:** - [README.md - Kubernetes Installation](https://github.com/Widhi-yahya/kubernetes_installation_docker/blob/master/README.md)
+**Referensi:**
+
+- [README.md - Kubernetes Installation](https://github.com/Widhi-yahya/kubernetes_installation_docker/blob/master/README.md)
 
 - [DEPLOYMENT.md - Web App Deployment](https://github.com/Widhi-yahya/kubernetes_installation_docker/blob/master/DEPLOYMENT.md)
 
@@ -58,5 +60,6 @@ Untuk menguji skalabilitas cluster, dilakukan proses _scaling up_ pada deploymen
 Verifikasi akhir menunjukkan pengguna berhasil masuk (login) dan diarahkan ke halaman **Image Upload Dashboard**. Bersamaan dengan itu, pemantauan melalui terminal mengonfirmasi bahwa ketiga replika pod _login-app_ kini berjalan dengan stabil, beserta informasi IP dan Port dari masing-masing service yang aktif.
 
 ![User already login](screenshots/Picture10.png)
+
 Dokumentasi_Deployment_K8s.md
 Menampilkan Dokumentasi_Deployment_K8s.md.
