@@ -10,8 +10,7 @@
 
 ## 1. Konfigurasi Kubernetes Dashboard
 
-Langkah pertama yang dilakukan adalah menerapkan konfigurasi untuk Kubernetes Dashboard, mengekspos layanan tersebut menggunakan tipe `NodePort`, dan membuat token otentikasi agar dashboard dapat diakses dengan hak akses admin.
-
+Langkah awal yang dilakukan dalam proses ini adalah menerapkan konfigurasi pada Kubernetes Dashboard agar dapat berfungsi dengan baik dan terhubung secara optimal dengan cluster Kubernetes, kemudian layanan dashboard tersebut diekspos menggunakan tipe `NodePort` sehingga memungkinkan akses dari luar cluster melalui alamat IP node dan port tertentu yang telah ditentukan, serta dilanjutkan dengan pembuatan token autentikasi yang memiliki hak akses administrator guna memastikan bahwa pengguna yang mengakses dashboard dapat melakukan pengelolaan cluster secara penuh melalui antarmuka yang tersedia dengan tetap memperhatikan aspek keamanan.
 ![Kubernetes Configuration](screenshots/Picture1.jpg)
 
 ## 2. Deployment Database (MySQL)
@@ -45,7 +44,7 @@ Selanjutnya, menguji fungsionalitas aplikasi dengan mencoba mendaftarkan penggun
 
 ## 5. Verifikasi Integritas Database
 
-Untuk memastikan sistem terhubung dengan benar, dilakukan verifikasi langsung ke dalam pod MySQL menggunakan perintah `kubectl exec`. Pemeriksaan pada tabel `users` membuktikan bahwa data registrasi _admin_ berhasil tersimpan di database.
+Untuk memastikan bahwa sistem telah terhubung dengan baik, dilakukan proses verifikasi dengan mengakses langsung ke dalam pod MySQL menggunakan perintah `kubectl exec`. Melalui langkah ini, dapat dilakukan pengecekan kondisi database secara langsung, khususnya pada tabel `users`, yang menunjukkan bahwa data registrasi akun admin telah berhasil tersimpan dengan benar, sehingga membuktikan bahwa integrasi antara aplikasi dan database berjalan sesuai dengan yang diharapkan.
 
 ![Database Integrity Verification](screenshots/Picture8.png)
 
