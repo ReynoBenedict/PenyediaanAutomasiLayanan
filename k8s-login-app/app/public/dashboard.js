@@ -132,3 +132,19 @@ document.addEventListener('DOMContentLoaded', function() {
             });
     }
 });
+// Add this to your dashboard.js or other frontend scripts
+fetch('/server-info')
+  .then(response => response.json())
+  .then(data => {
+    const serverInfoDiv = document.createElement('div');
+    serverInfoDiv.style.position = 'fixed';
+    serverInfoDiv.style.bottom = '10px';
+    serverInfoDiv.style.right = '10px';
+    serverInfoDiv.style.padding = '5px';
+    serverInfoDiv.style.background = 'rgba(0,0,0,0.6)';
+    serverInfoDiv.style.color = 'white';
+    serverInfoDiv.style.fontSize = '12px';
+    serverInfoDiv.style.borderRadius = '3px';
+    serverInfoDiv.textContent = `Server: ${data.podName}`;
+    document.body.appendChild(serverInfoDiv);
+  });
