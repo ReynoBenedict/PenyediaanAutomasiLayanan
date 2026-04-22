@@ -34,6 +34,22 @@ const upload = multer({
 });
 
 const app = express();
+
+const promBundle = require("express-prom-bundle");
+
+const metricsMiddleware = promBundle({
+  includeMethod: true,
+  includePath: true,
+  metricsPath: '/metrics', // 🔥 TAMBAH INI
+  promClient: {
+    collectDefaultMetrics: {
+      timeout: 5000
+    }
+  }
+});
+
+app.use(metricsMiddleware);
+
 const port = process.env.PORT || 3000;
 
 // Database configuration
